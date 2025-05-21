@@ -3,7 +3,7 @@ export default function Header() {
     return (
       <header className="container-fluid d-flex my-3 align-items-center">
 
-        <Link  href={``}>
+        <Link  href={`/`}>
         <img src="/images/legoyoda.jpg" alt="Logo" className="logo " />
         </Link>
         
@@ -30,7 +30,9 @@ export default function Header() {
           </nav>
         </nav>
 
-        
+        <Link href={`/panier`}>
+                  <img src="/images/imagepanier.png" alt="Utilisateur" className="user-icon " />
+                </Link>
         <Link href={`/connexion`}>
           <img src="/images/logo_utilisateur.png" alt="Utilisateur" className="user-icon " />
         </Link>

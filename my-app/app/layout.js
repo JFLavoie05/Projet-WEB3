@@ -1,8 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
-import '@/styles/style.css'
-import '@/styles/styleMobile.css'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+import '../styles/style.css'
+import '../styles/styleMobile.css'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 
 export const metadata = {

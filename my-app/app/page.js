@@ -1,10 +1,10 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import SiteWebCard from '@/components/SiteWebCard'
+import SiteWebCard from '../components/SiteWebCard'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import '@/styles/style.css'
-import '@/styles/styleMobile.css'
+import '../styles/style.css'
+import '../styles/styleMobile.css'
 
 export default function HomePage() {
   const [sitewebs, SetSiteWebs] = useState([])
@@ -18,7 +18,7 @@ export default function HomePage() {
     if (!token) return
 
     try {
-      const payload = JSON.parse(atob(token.split('.')[1])) // décodage base64
+      const payload = JSON.parse(atob(token.split('.')[1])) 
       setNomUtilisateur(payload.sub)
     } catch (e) {
       console.error('Token invalide')

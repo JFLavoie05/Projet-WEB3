@@ -1,15 +1,42 @@
 'use client'
 
 import { useState } from 'react'
+import { useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 
 export default function ConnexionPage() {
+  const [estConnecte, setEstConnecte] = useState(false)
   const router = useRouter()
 
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [erreur, setErreur]   = useState('')
   const [loading, setLoading] = useState(false)
+
+  useEffect(() => {
+    const token = localStorage.getItem('token')
+    const userId = localStorage.getItem('userId')
+    if (token && userId) {
+      setEstConnecte(true)
+    }
+  }, [])
+
+  const handleDeconnexion = () => {
+    localStorage.removeItem('token')
+    localStorage.removeItem('userId')
+    window.location.reload()
+  }
+
+  if (estConnecte) {
+    return (
+      <div className="container mt-5 text-center">
+        <h2>Vous êtes déjà connecté.</h2>
+        <button className="btn btn-danger mt-3" onClick={handleDeconnexion}>
+          Se déconnecter
+        </button>
+      </div>
+    )
+  }
 
   const handleConnexion = async (e) => {
     e.preventDefault()
