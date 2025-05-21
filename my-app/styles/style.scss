@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+
+$primary-color: #222831;
+$secondary-color: #393E46;
+$font-primary: "Lora", serif;
+$font-secondary: "Open-Sans", sans-serif;
+
+
+li {
+  font-family: $font-primary;
+}
+
+p {
+  font-family: $font-secondary;
+}
+
+header {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menuHamburger {
+  display: none;
+}
+
+.container-fluid {
+  width: 83.8%;
+}
+
+
+.bodyBlog {
+  h1 {
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  p {
+    margin-bottom: 50px;
+  }
+}
+
+.commentaires {
+  label {
+    font-family: $font-primary;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  textarea {
+    border: 2px solid $primary-color;
+    margin-bottom: 10px;
+  }
+  button {
+    font-family: $font-secondary;
+    font-size: 20px;
+    background-color: $primary-color;
+  }
+}
+
+
+.imageMillieu {
+  p {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+}
+
+
+.nav {
+  li {
+    padding: 0 75px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  a {
+    color: $primary-color !important;
+  }
+}
+
+
+.card {
+  margin: 15px;
+  border: 2px solid $primary-color;
+
+  img {
+    height: 200px;
+    padding: 5px;
+    margin-bottom: -10px;
+  }
+
+  h5 {
+    font-family: $font-primary;
+    color: white;
+    font-size: 25px;
+    margin: 0 -10px;
+    border: 1px solid $primary-color;
+    background-color: $secondary-color;
+  }
+}
+
+.navbar1 {
+  padding-top: 50px;
+  padding-bottom: 30px;
+
+  label {
+    font-size: 20px;
+    margin-bottom: -1px;
+    margin-left: 100px;
+  }
+
+  select {
+    width: 60%;
+  }
+
+  input {
+    border: 2px solid $primary-color;
+  }
+}
+
+
+.form-select {
+  border: 2px solid $primary-color;
+}
+
+
+footer {
+  text-align: center;
+  padding: 20px;
+
+  .entreprise {
+    font-size: 20px;
+    padding-top: 20px;
+  }
+
+  .année {
+    font-size: 20px;
+    margin-bottom: -10px;
+  }
+}
+
+
+.footerBlog {
+  .entreprise {
+    margin-bottom: 15px;
+  }
+}

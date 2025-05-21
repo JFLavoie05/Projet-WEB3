@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+li {
+  font-family: "Lora", serif;
+}
+
+p {
+  font-family: "Open-Sans", sans-serif;
+}
+
+header {
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.menuHamburger {
+  display: none;
+}
+
+.container-fluid {
+  width: 83.8%;
+}
+
+.bodyBlog h1 {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.bodyBlog p {
+  margin-bottom: 50px;
+}
+
+.commentaires label {
+  font-family: "Lora", serif;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.commentaires textarea {
+  border: 2px solid #222831;
+  margin-bottom: 10px;
+}
+.commentaires button {
+  font-family: "Open-Sans", sans-serif;
+  font-size: 20px;
+  background-color: #222831;
+}
+
+.imageMillieu p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.nav li {
+  padding: 0 75px;
+  font-size: 30px;
+  font-weight: bold;
+}
+.nav a {
+  color: #222831 !important;
+}
+
+.card {
+  margin: 15px;
+  border: 2px solid #222831;
+}
+.card img {
+  height: 200px;
+  padding: 5px;
+  margin-bottom: -10px;
+}
+.card h5 {
+  font-family: "Lora", serif;
+  color: white;
+  font-size: 25px;
+  margin: 0 -10px;
+  border: 1px solid #222831;
+  background-color: #393E46;
+}
+
+.navbar1 {
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+.navbar1 label {
+  font-size: 20px;
+  margin-bottom: -1px;
+  margin-left: 100px;
+}
+.navbar1 select {
+  width: 60%;
+}
+.navbar1 input {
+  border: 2px solid #222831;
+}
+
+.form-select {
+  border: 2px solid #222831;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+}
+footer .entreprise {
+  font-size: 20px;
+  padding-top: 20px;
+}
+footer .année {
+  font-size: 20px;
+  margin-bottom: -10px;
+}
+
+.footerBlog .entreprise {
+  margin-bottom: 15px;
+}
+
+
+.logo {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+}
+
+.user-icon {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+}
+
