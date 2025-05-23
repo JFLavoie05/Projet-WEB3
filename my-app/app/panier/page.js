@@ -12,7 +12,7 @@ export default function PanierPage() {
   useEffect(() => {
     const token = localStorage.getItem('token')
     const userId = localStorage.getItem('userId')
-    if (!token) return
+    if (!token) return 
 
     
 
@@ -34,22 +34,23 @@ export default function PanierPage() {
     }
 
     const stripe = await stripePromise
-
+    
     const res = await fetch('/api/create-payment-intent', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ items: panier.siteWeb }),
     })
 
-    const { id } = await res.json()
-
-    const result = await stripe.redirectToCheckout({ sessionId: id })
+    const { sessionId } = await res.json();
+    console.log(sessionId)
+    console.log(res)
+    const result = await stripe.redirectToCheckout({ sessionId });
     if (result.error) {
       console.error(result.error.message)
     }
   }
 
-  if (!panier) return <p className="container mt-5">Chargement du panier...</p>
+  if (!panier) return <p className="container mt-5">Vous n'êtes pas connecté</p>
 
   return (
     <div className="container my-5">

@@ -1,21 +1,21 @@
-import Link from 'next/link'
-export default function Header() {
-    return (
-      <header className="container-fluid d-flex my-3 align-items-center">
+import Link from 'next/link';
 
-        <Link  href={`/`}>
-        <img src="/images/legoyoda.jpg" alt="Logo" className="logo " />
-        </Link>
-        
-        <nav className="d-flex flex-grow-1 justify-content-center">
-          <ul className="nav menuNav d-none d-md-flex">
-            <li className="nav-item col-3"><a className="nav-link" href="#">Menu1</a></li>
-            <li className="nav-item col-3"><a className="nav-link" href="#">Menu2</a></li>
-            <li className="nav-item col-3"><a className="nav-link" href="#">Menu3</a></li>
-            <li className="nav-item col-3"><a className="nav-link" href="#">Menu4</a></li>
-          </ul>
-  
-          <nav className="navbar menuHamburger d-md-none">
+export default function Header() {
+  return (
+    <header className="header container-fluid d-flex align-items-center justify-content-between py-3 px-4 shadow-sm bg-white rounded">
+      
+      <Link href="/">
+        <img src="/images/GoPappyLogo.png" alt="Logo" className="logo me-3" />
+      </Link>
+
+      
+      <nav className="d-none d-md-block flex-grow-1">
+        <ul className="nav justify-content-center gap-4 menuNav">
+          <li className="nav-item"><a className="nav-link" href="../ajouter">Ajouter un produit</a></li>
+        </ul>
+      </nav>
+
+      <nav className="navbar menuHamburger d-md-none">
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu">
               <span className="navbar-toggler-icon"></span>
             </button>
@@ -28,16 +28,19 @@ export default function Header() {
               </ul>
             </div>
           </nav>
-        </nav>
-
-        <Link href={`/panier`}>
-                  <img src="/images/imagepanier.png" alt="Utilisateur" className="user-icon " />
-                </Link>
-        <Link href={`/connexion`}>
-          <img src="/images/logo_utilisateur.png" alt="Utilisateur" className="user-icon " />
-        </Link>
         
-      </header>
-    )
-  }
+
+      
+      <div className="d-flex align-items-center gap-3 ms-3">
+        <Link href="/panier">
+          <img src="/images/imagepanier.png" alt="Panier" className="icon" />
+        </Link>
+        <Link href="/connexion">
+          <img src="/images/logo_utilisateur.png" alt="Utilisateur" className="icon" />
+        </Link>
+      </div>
+    </header>
+  );
+}
+
   

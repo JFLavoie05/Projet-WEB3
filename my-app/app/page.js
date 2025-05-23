@@ -39,10 +39,12 @@ export default function HomePage() {
       blog.nom.toLowerCase().includes(searchTerm.toLowerCase())
     )
     .sort((a, b) => {
-      if (sortOption === '1') {
-        return new Date(b.date) - new Date(a.date)
+      if (sortOption === 'prix') {
+        return a.prix - b.prix 
+      } else if (sortOption === 'alpha') {
+        return a.nom.localeCompare(b.nom) 
       }
-      return 0
+      return 0 
     })
 
   return (
@@ -70,9 +72,9 @@ export default function HomePage() {
               value={sortOption}
               onChange={(e) => setSortOption(e.target.value)}
             >
-              <option value="">Alphabétique</option>
-              <option value="1">Date</option>
-              
+              <option value="">Sans tri</option>
+              <option value="alpha">Alphabétique</option>
+              <option value="prix">Prix</option>
             </select>
           </div>
         </div>

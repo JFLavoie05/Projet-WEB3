@@ -8,6 +8,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
 
 export async function POST(request: Request) {
   try {
+    
     const body = await request.json()
     const items = body.items || []
 
@@ -32,8 +33,9 @@ export async function POST(request: Request) {
       cancel_url: `${origin}/cancel`,
     })
 
-    return NextResponse.json({ id: session.id })
+    return NextResponse.json({ sessionId: session.id })
   } catch (err: any) {
+    console.error(err)
     return NextResponse.json({ error: err.message }, { status: 500 })
   }
 }

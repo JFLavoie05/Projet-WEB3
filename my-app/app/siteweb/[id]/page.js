@@ -91,10 +91,7 @@ export default function BlogPostPage() {
       </div>
 
       
-      <div className="mt-5">
-        <h4>Informations supplémentaires</h4>
-        <p>Ce produit est développé pour répondre à vos besoins numériques. Pour toute question, contactez notre support technique ou consultez notre FAQ.</p>
-      </div>
+      
     </div>
   )
 }
