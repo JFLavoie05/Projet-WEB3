@@ -14,7 +14,7 @@ export default function SiteWebCard({ siteweb }) {
       setRole(roleFromToken)
     }
   }, [])
-
+  console.log(role)
   const handleModifier = () => {
     window.location.href = `/modifier/${siteweb.id}`;
   };

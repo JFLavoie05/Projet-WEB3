@@ -40,7 +40,7 @@ export default function BlogPostPage() {
       return;
     }
   
-    
+    console.log(userId)
     try {
       const res = await fetch(`https://projet-prog4e10.cegepjonquiere.ca/api/paniers/${userId}/ajouter`, {
         method: "POST",
